@@ -1,0 +1,9 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		escreva("!Bem Vindo ao Cassino! \n")
+		escreva("pressione 2 para ir na
+	}
+}
