@@ -1,9 +1,79 @@
 programa
 {
+	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
+		cadeia a = "a"
+		cadeia resposta
+		inteiro dinheiro = 1000
+		inteiro aposta
+		inteiro valor = 0
+		inteiro sort
+		
+		inteiro dig1=0, dig2=0, dig3=0
+		
+		inteiro sete = 7
+		inteiro Bar = 2
+		inteiro BarBar = 3
+		inteiro BarBarBar = 4
+		inteiro diamante = 10
+		
 		escreva("!Bem Vindo ao Cassino! \n")
-		escreva("pressione 2 para ir na
+		escreva("Pressione a para começar \n")
+		leia(resposta) 
+		se(resposta == "a")
+		{escreva("Você começou em um caça niquel com 1000 reais. \n")
+		escreva("vc deseja apostar quanto? ")
+		leia (aposta)
+		se(aposta <= dinheiro){
+		dinheiro -= aposta
+		sort = u.sorteia (1, 5)
+			para(inteiro i = 1; i <= 5; i++){
+		sort = u.sorteia (1, 25)
+		
+			se(sort == 1){
+				valor+=7
+				escreva("|    sete   |    ", dig2, "   |   ", dig3, "   |")
+			}
+			se(sort == 2){
+				valor+=2
+				dig1 = sete
+				escreva("|    bar    |    ", dig2, "   |   ", dig3, "   |")
+			}
+			se(sort == 3){
+				valor+=3
+				dig1 = BarBar
+				escreva("|  bar  bar |    ", dig2, "   |   ", dig3, "   |")
+			}
+			se(sort == 4){
+				valor+=4
+				dig1 = BarBarBar
+				escreva("|bar bar bar|    ", dig2, "   |   ", dig3, "   |")
+			}
+			se(sort == 5){
+				valor+=10
+				dig1 = diamante
+				escreva("|  diamante |    ", dig2, "   |   ", dig3, "   |")
+			}
+			}
+			dig1 = valor
+			valor = 0
+			escreva(dig1)
+		}senao se(aposta > dinheiro){
+			escreva("Vá toma no teu cu, aqui não papo fiato não pobre, liso")
+		}
+			                                                                                                                          
+                                                                                                    
+                                                                                                    
+                                                                                                    
+			
+			
+			
+			
+			
+			}
+			senao{escreva("Você não ficou viciado e não ficou com nome sujo no serasa. (!final secreto!)")}
+		
 	}
 }
