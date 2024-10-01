@@ -1,10 +1,11 @@
 programa
 {
+	inclua biblioteca Matematica --> m
 	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
-		cadeia a = "a"
+		cadeia a 
 		cadeia resposta
 		inteiro dinheiro = 1000
 		inteiro aposta
@@ -20,10 +21,10 @@ programa
 		inteiro diamante = 10
 		
 		escreva("!Bem Vindo ao Cassino! \n")
-		escreva("Pressione a para começar \n")
+		escreva("Pressione ENTER para começar \n")
 		leia(resposta) 
-		se(resposta == "a")
-		{escreva("Você começou em um caça niquel com 1000 reais. \n")
+		se(resposta == ""){
+		escreva("Você começou em um caça niquel com 1000 reais. \n")
 		escreva("vc deseja apostar quanto? ")
 		leia (aposta)
 		se(aposta <= dinheiro){
@@ -34,12 +35,18 @@ programa
 		
 			se(sort == 1){
 				valor+=7
-				escreva("|    sete   |    ", dig2, "   |   ", dig3, "   |")
+				dig1 = sete
+				escreva("|   ", dig1, "   |    ", dig2, "   |   ", dig3, "   |")
+
+					sorteia(1, 5)
+					se(sort == 1)
+					dig2 = sete
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |")
 			}
 			se(sort == 2){
 				valor+=2
-				dig1 = sete
-				escreva("|    bar    |    ", dig2, "   |   ", dig3, "   |")
+				dig1 = Bar
+				escreva("|    ", Bar, "    |    ", dig2, "   |   ", dig3, "   |")
 			}
 			se(sort == 3){
 				valor+=3
@@ -57,11 +64,9 @@ programa
 				escreva("|  diamante |    ", dig2, "   |   ", dig3, "   |")
 			}
 			}
-			dig1 = valor
-			valor = 0
-			escreva(dig1)
+			
 		}senao se(aposta > dinheiro){
-			escreva("Vá toma no teu cu, aqui não papo fiato não pobre, liso")
+			escreva("só aceitamos fiado de qm tem 90 anos e está acompanhado dos avós. Colocaram um saco de pano na sua cabeça para te bater e te jogaram para fora do cassino. (final secreto2?)")
 		}
 			                                                                                                                          
                                                                                                     
@@ -72,8 +77,11 @@ programa
 			
 			
 			
-			}
-			senao{escreva("Você não ficou viciado e não ficou com nome sujo no serasa. (!final secreto!)")}
+			
+	
+	}senao{
+		escreva("Você não ficou viciado e não ficou com nome sujo no serasa. (!final secreto!)")
 		
+		}
 	}
 }
