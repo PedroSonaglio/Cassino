@@ -1,7 +1,7 @@
 programa
 {
-	inclua biblioteca Matematica --> m
-	inclua biblioteca Util --> u
+	inclua biblioteca Matematica
+	inclua biblioteca Util
 	
 	funcao inicio()
 	{
@@ -29,39 +29,838 @@ programa
 		leia (aposta)
 		se(aposta <= dinheiro){
 		dinheiro -= aposta
-		sort = u.sorteia (1, 5)
+		sort = sorteia (1, 5)
 			para(inteiro i = 1; i <= 5; i++){
-		sort = u.sorteia (1, 25)
+		sort = sorteia (1, 5)
 		
 			se(sort == 1){
 				valor+=7
 				dig1 = sete
-				escreva("|   ", dig1, "   |    ", dig2, "   |   ", dig3, "   |")
+				escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
 
 					sorteia(1, 5)
-					se(sort == 1)
+					se(sort == 1){
 					dig2 = sete
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |")
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							}
+					sorteia(1, 5)
+					}se(sort == 2){
+					dig2 = Bar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 3){
+					dig2 = BarBar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							
+					sorteia(1, 5)
+					}se(sort == 4){
+					dig2 = BarBarBar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+						sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 5){
+					dig2 = diamante
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+					}
+					
 			}
 			se(sort == 2){
 				valor+=2
 				dig1 = Bar
-				escreva("|    ", Bar, "    |    ", dig2, "   |   ", dig3, "   |")
+				escreva("|    ", Bar, "    |    ", dig2, "    |    ", dig3, "    |\n")
+				
+				sorteia(1, 5)
+					se(sort == 1){
+					dig2 = sete
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 2){
+					dig2 = Bar
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 3){
+					dig2 = BarBar
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 4){
+					dig2 = BarBarBar
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 5){
+					dig2 = diamante
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+					}
+					
+					
 			}
 			se(sort == 3){
 				valor+=3
 				dig1 = BarBar
-				escreva("|  bar  bar |    ", dig2, "   |   ", dig3, "   |")
+				escreva("|  ", BarBar, " |    ", dig2, "    |    ", dig3, "    |\n")
+				
+				sorteia(1, 5)
+					se(sort == 1){
+					dig2 = sete
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 2){
+					dig2 = Bar
+					escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 3){
+					dig2 = BarBar
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}se(sort == 4){
+					dig2 = BarBarBar
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+
+					sorteia(1, 5)
+					}
+					se(sort == 5){
+					dig2 = diamante
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "    |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							}
+					}
+					
 			}
 			se(sort == 4){
 				valor+=4
 				dig1 = BarBarBar
-				escreva("|bar bar bar|    ", dig2, "   |   ", dig3, "   |")
+				escreva("|    ", BarBarBar, "    |    ", dig2, "    |    ", dig3, "    |\n")
+				
+				sorteia(1, 5)
+					se(sort == 1){
+					dig2 = sete
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							
+					sorteia(1, 5)
+					}se(sort == 2){
+					dig2 = Bar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							
+					sorteia(1, 5)
+					}se(sort == 3){
+					dig2 = BarBar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							
+					sorteia(1, 5)
+					}se(sort == 4){
+					dig2 = BarBarBar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)sorteia(1, 5)
+							se(sort == 1)
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 2)
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 3)
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 4)
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 5)
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5)
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+
+					sorteia(1, 5)
+					}se(sort == 5){
+					dig2 = diamante
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1){
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 2){
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 3){
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 4){
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+							sorteia(1, 5)
+							se(sort == 5){
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+							}
+					}
 			}
 			se(sort == 5){
 				valor+=10
 				dig1 = diamante
-				escreva("|  diamante |    ", dig2, "   |   ", dig3, "   |")
+				escreva("|  ", diamante, " |    ", dig2, "   |   ", dig3, "   |\n")
+				
+				sorteia(1, 5)
+					se(sort == 1)
+					dig2 = sete
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1)
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 2)
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 3)
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 4)
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 5)
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+
+					sorteia(1, 5)
+					se(sort == 2)
+					dig2 = Bar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1)
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 2)
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 3)
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 4)
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 5)
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+
+					sorteia(1, 5)
+					se(sort == 3)
+					dig2 = BarBar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1)
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 2)
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 3)
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 4)
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 5)
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+
+					sorteia(1, 5)
+					se(sort == 4)
+					dig2 = BarBarBar
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 1)
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 2)
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 3)
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 4)
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 5)
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+
+					sorteia(1, 5)
+					se(sort == 5)
+					dig2 = diamante
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   | \n")
+						
+							sorteia(1, 5)
+							se(sort == 1)
+							dig3 = sete
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 2)
+							dig3 = Bar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 3)
+							dig3 = BarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 4)
+							dig3 = BarBarBar
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+						
+							sorteia(1, 5)
+							se(sort == 5)
+							dig3 = diamante
+							escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
+					
+					
+					
 			}
 			}
 			
