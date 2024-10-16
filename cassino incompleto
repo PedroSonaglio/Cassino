@@ -1,3 +1,4 @@
+
 programa
 {
 	inclua biblioteca Matematica
@@ -10,6 +11,7 @@ programa
 		inteiro dinheiro = 1000
 		inteiro aposta
 		inteiro valor = 0
+		inteiro result = 0
 		inteiro sort
 		inteiro sort2
 		inteiro sort3
@@ -17,9 +19,9 @@ programa
 		inteiro dig1=0, dig2=0, dig3=0
 		
 		inteiro sete = 7
-		inteiro Bar = 2
-		inteiro BarBar = 3
-		inteiro BarBarBar = 4
+		inteiro Bar = 4
+		inteiro BarBar = 5
+		inteiro BarBarBar = 6
 		inteiro diamante = 10
 		
 		escreva("!Bem Vindo ao Cassino! \n")
@@ -50,6 +52,8 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
+							result = result + dig1 + dig2 + dig3
+							se (result <= 10) dinheiro - aposta
 							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
 							pare
 							}
