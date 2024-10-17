@@ -1,4 +1,3 @@
-
 programa
 {
 	inclua biblioteca Matematica
@@ -15,9 +14,7 @@ programa
 		inteiro sort
 		inteiro sort2
 		inteiro sort3
-		
 		inteiro dig1=0, dig2=0, dig3=0
-		
 		inteiro sete = 7
 		inteiro Bar = 4
 		inteiro BarBar = 5
@@ -39,46 +36,117 @@ programa
 			para(inteiro i = 1; i <= 5; i++){
 		sort = sorteia (1, 5)
 		
-			se(sort == 1){
+				se(sort == 1){
 				valor+=7
 				dig1 = sete
 				escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-
 					sort2 = sorteia(1, 5)
 					se(sort2 == 1){
 					dig2 = sete
-					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")		
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
 							result = result + dig1 + dig2 + dig3
-							se (result <= 10) dinheiro - aposta
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					sort2 = sorteia(1, 5)
@@ -89,101 +157,324 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 3){
 					dig2 = BarBar
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")				
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 4){
 					dig2 = BarBarBar
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")				
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					sort2 = sorteia(1, 5)
@@ -194,31 +485,106 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					}
@@ -227,41 +593,114 @@ programa
 			se(sort == 2){
 				valor+=2
 				dig1 = Bar
-				escreva("|    ", Bar, "    |    ", dig2, "    |    ", dig3, "    |\n")
-				
+				escreva("|    ", Bar, "    |    ", dig2, "    |    ", dig3, "    |\n")	
 				sort2 = sorteia(1, 5)
 					se(sort2 == 1){
 					dig2 = sete
-					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")		
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					}sort2 = sorteia(1, 5)
@@ -272,294 +711,878 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 3){
 					dig2 = BarBar
-					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")			
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
-
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 4){
 					dig2 = BarBarBar
-					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")			
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
-
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 5){
 					dig2 = diamante
-					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")			
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							
 							}
 					}
-					
-					
 			}
 			se(sort == 3){
 				valor+=3
 				dig1 = BarBar
 				escreva("|  ", dig1, " |    ", dig2, "    |    ", dig3, "    |\n")
-
 					sort2 = sorteia(1, 5)
 					se(sort2 == 1){
 					dig2 = sete
 					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
-							
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 2){
 					dig2 = Bar
 					escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "    |\n")
-						
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}	
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 3){
 					dig2 = BarBar
-					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")		
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}					
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 4){
 					dig2 = BarBarBar
-					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")					
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}						
 					}sort2 = sorteia(1, 5)
 					se(sort2 == 5){
 					dig2 = diamante
@@ -568,31 +1591,106 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					}
@@ -611,70 +1709,221 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro =- aposta
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 2){
 					dig2 = Bar
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")				
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}							
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 3){
 					dig2 = BarBar
@@ -683,103 +1932,324 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}						
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 4){
 					dig2 = BarBarBar
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")					
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}						
 					sort2 = sorteia(1, 5)
 					}se(sort2 == 5){
 					dig2 = diamante
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")					
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 					}
@@ -798,31 +2268,106 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							
@@ -834,165 +2379,440 @@ programa
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}					
 					sort2 = sorteia(1, 5)
 					se(sort2 == 3)
 					dig2 = BarBar
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")				
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
+							pare
+							}					
 					sort2 = sorteia(1, 5)
 					se(sort2 == 4)
 					dig2 = BarBarBar
-					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")
-						
+					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   |\n")				
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
-							
 					sort2 = sorteia(1, 5)
 					se(sort2 == 5)
 					dig2 = diamante
 					escreva("|    ", dig1, "    |    ", dig2, "   |   ", dig3, "   | \n")
-						
 							sort3 = sorteia(1, 5)
 							se(sort3 == 1){
 							dig3 = sete
-							escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 2){
 							dig3 = Bar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 3){
 							dig3 = BarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 =sorteia(1, 5)
 							se(sort3 == 4){
 							dig3 = BarBarBar
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+							}
 							pare
 							}
 							sort3 = sorteia(1, 5)
 							se(sort3 == 5){
 							dig3 = diamante
-							escreva("|    ", dig1, "    |    ", dig2, "    |   ", dig3, "   |\n")
-							pare
+							result = result + dig1 + dig2 + dig3
+								se (result <= 10){ 
+								dinheiro -= aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce perdeu", aposta, ", ficou com", dinheiro, "e depois desistiu.")
+								}
+								se (result == 10){
+								dinheiro += aposta
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final normal, voce nem perdeu e nem ganhou, continuou com 1000 e broxou de continuar apostando.") 
+								}
+								se (result >= 15){
+								dinheiro += aposta * 2
+								escreva("|    ", dig1, "    |    ", dig2, "    |    ", dig3, "    |\n")
+								escreva(" final bom, voce ganhou", aposta, ", e ficou com", dinheiro, "e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
 							}
-							
-							
-					
-					
-					
-			}
-			}
-			
-		}senao se(aposta > dinheiro){
+							pare
+							}}}
+		}se(aposta > dinheiro){
 			escreva("só aceitamos fiado de qm tem 90 anos e está acompanhado dos avós. Colocaram um saco de pano na sua cabeça para te bater e te jogaram para fora do cassino. (final secreto2?)")
-		}
-			                                                                                                                          
-                                                                                                    
-                                                                                                    
-                                                                                                    
-			
-			
-			
-			
-			
-			
-	
+		}	
 	}senao{
 		escreva("Você não ficou viciado e não ficou com nome sujo no serasa. (!final secreto!)")
-		
 		}
 	}}
+}
