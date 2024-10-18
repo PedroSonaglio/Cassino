@@ -1,0 +1,141 @@
+programa
+{
+
+	inclua biblioteca Matematica
+	inclua biblioteca Util
+
+	
+	inteiro dinheiro = 1000
+	inteiro aposta = 0
+	
+	inteiro valor = 0
+	inteiro result = 0
+	inteiro sort1
+	inteiro sort2
+	inteiro sort3
+	inteiro dig1=0, dig2=0, dig3=0
+	inteiro sete = 7
+	inteiro Bar = 4
+	inteiro BarBar = 5
+	inteiro BarBarBar = 6
+	inteiro diamante = 10
+	
+	funcao inicio()
+	{
+
+		comecar()
+		
+	}
+
+	funcao comecar(){
+		
+		cadeia resposta
+		
+		escreva("!Bem Vindo ao Cassino! \n")
+		escreva("Pressione ENTER para começar \n")
+		leia(resposta) 
+
+		se(resposta == ""){
+			escreva("Você começou em um caça niquel com 1000 reais. \n")
+			escreva("Vamos apostar!")
+			Util.aguarde(3000)
+			limpa()
+	
+			apostar()
+		} senao {
+			verificaSeFinalSecreto1()
+		}
+		
+
+	}
+
+	funcao apostar(){
+		
+		
+		
+		
+		enquanto(aposta <= dinheiro){
+
+			escreva("vc deseja apostar quanto? ")
+			leia (aposta)
+		
+			dinheiro -= aposta
+			sort1 = Util.sorteia (1, 5)
+			sort2 = Util.sorteia (1, 5)
+			sort3 = Util.sorteia (1, 5)
+
+			//comecar a "girar a roleta"
+
+			se(verdadeiro){
+
+				valor+=7
+				dig1 = sete
+
+				
+
+				//simulação de roleta
+				
+				limpa()
+				
+				para(inteiro i=5; i >= 0; i--){
+					escreva("|    SLOT  MACHINE    |\n")	
+					escreva("|    ", Util.sorteia (1, 5), "    |    ", Util.sorteia (1, 5), "    |    ", Util.sorteia (1, 5), "    |\n")	
+					Util.aguarde(500 * i)
+					limpa()
+				}
+
+				escreva("|    SLOT  MACHINE    |\n")	
+				escreva("|    ", sort1, "    |    ", sort2, "    |    ", sort3, "    |\n")	
+
+
+				verificaResultado(sort1, sort2, sort3)
+				
+
+				
+			}
+
+			
+
+			verificaSeFinalSecreto2(aposta)
+		}
+
+		
+	}
+
+	funcao verificaResultado(inteiro dig1, inteiro dig2, inteiro dig3){
+		
+		result = dig1 + dig2 + dig3
+
+		se (result == 15){
+			dinheiro += aposta * 2
+			escreva(" final bom ao quadrado! Voce ganhou", aposta, ", e ficou com ", dinheiro, " e foi expulso por ganhar (quem tem que ganhar é sempre o estabelecimento).")
+		}
+
+		se (result >= 10){
+			dinheiro += aposta * 1.5
+			escreva(" final bom: Voce ganhou", aposta, ", e ficou com ", dinheiro)
+		}
+		
+		senao se (result == 10){
+			dinheiro += aposta
+			escreva(" final normal: Voce nem perdeu e nem ganhou, e desanimou de continuar apostando.") 
+		} senao se (result <= 10){ 
+			dinheiro -= aposta
+			escreva(" final triste: Voce perdeu R$", aposta, ", ficou com R$", dinheiro, " e depois desistiu.")
+		
+		} 
+
+	}
+
+	funcao verificaSeFinalSecreto1(){
+		escreva("Você não ficou viciado e não ficou com nome sujo no serasa. (!final secreto!)")	
+	}
+
+	funcao verificaSeFinalSecreto2(inteiro valorApostado){
+		
+		se(valorApostado > dinheiro){
+			escreva("só aceitamos fiado de qm tem 90 anos e está acompanhado dos avós. Colocaram um saco de pano na sua cabeça para te bater e te jogaram para fora do cassino. (final secreto2?)")
+				
+		}
+	}
+}
