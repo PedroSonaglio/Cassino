@@ -1,4 +1,5 @@
 
+
 programa
 {
 
@@ -57,7 +58,7 @@ programa
 		
 		enquanto(aposta <= dinheiro){
 
-			escreva("vc deseja apostar quanto? ")
+			escreva(" vc deseja apostar quanto? ")
 			leia (aposta)
 		
 			dinheiro -= aposta
@@ -114,44 +115,44 @@ programa
 
 		se (result >= 10){
 			dinheiro += aposta * 1.5
-			escreva(" final bom: Voce ganhou ", aposta, ", e ficou com ", dinheiro)
+			escreva(" final bom: Voce ganhou ", aposta, ", e ficou com ", dinheiro, ".")
 		}
 		
 		senao se (result == 10){
 			dinheiro += aposta
-			escreva(" final normal: Voce nem perdeu e nem ganhou, e desanimou de continuar apostando.") 
+			escreva(" final normal: Voce nem perdeu e nem ganhou.") 
 
 			
 		} senao se (result <= 10){ 
 			dinheiro -= aposta
-			escreva(" final triste: Voce perdeu R$", aposta, ", ficou com R$", dinheiro + aposta, " e depois desistiu.")
-			(dinheiro + aposta)
+			escreva(" final triste: Voce perdeu R$", aposta, ", ficou com R$", dinheiro + aposta,". ")
+			dinheiro += aposta
 		} 
 		
 		se (result == 21.3){
 			dinheiro += aposta * 7
-			escreva(" final ótimo: !!!JACKPOT!!! Voce ganhou ", aposta, ", e ficou com ", dinheiro, " mas foi expulso e pegaram todo seu dinheiro (quem ganha sempre é a casa)")
+			escreva(" final ótimo: !!!JACKPOT!!! Voce ganhou ", aposta, ", e ficou com ", dinheiro, " mas foi expulso e pegaram todo seu dinheiro (quem ganha sempre é a casa).")
 		}
 		
 		se (result == 31.5){
 			dinheiro += aposta * 10
-			escreva(" final PERFEITO (talvez): Voce ganhou ", aposta, ", e ficou com ", dinheiro, " mas foi expulso e pegaram todo seu dinheiro (quem ganha sempre é a casa)")
+			escreva(" final PERFEITO (talvez): Voce ganhou ", aposta, ", e ficou com ", dinheiro, " mas foi expulso e pegaram todo seu dinheiro (quem ganha sempre é a casa).")
 		}
 		
 		
-		se (result >= 12.6){
+		se (result == 12.6){
 			dinheiro += aposta * 4
-			escreva(" !3Bar!: Voce ganhou ", aposta, ", e ficou com ", dinheiro)
+			escreva(" !3Bar!: Voce ganhou ", aposta, ", e ficou com ", dinheiro, ".")
 		}
 		
-		se (result >= 15.6){
+		se (result == 15.6){
 			dinheiro += aposta * 5
-			escreva(" !!3BarBar!!: Voce ganhou ", aposta, ", e ficou com ", dinheiro)
+			escreva(" !!3BarBar!!: Voce ganhou ", aposta, ", e ficou com ", dinheiro, ".")
 		}
 		
-		se (result >= 19.2){
+		se (result == 19.2){
 			dinheiro += aposta * 6
-			escreva(" !!!3BarBarBar!!!: Voce ganhou ", aposta, ", e ficou com ", dinheiro)
+			escreva(" !!!3BarBarBar!!!: Voce ganhou ", aposta, ", e ficou com ", dinheiro, ".")
 		}
 		
 		
@@ -166,7 +167,7 @@ programa
 
 	funcao verificaSeFinalSecreto2(inteiro valorApostado){
 		
-		se(valorApostado > dinheiro){
+		se(valorApostado == dinheiro){
 			escreva("só aceitamos fiado de qm tem 90 anos e está acompanhado dos avós. Colocaram um saco de pano na sua cabeça para te bater e te jogaram para fora do cassino. (final secreto2?)")
 				
 		}
